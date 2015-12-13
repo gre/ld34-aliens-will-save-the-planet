@@ -4,7 +4,8 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "budo src/index.js:bundle.js --live"
+    "start": "budo src/index.js:bundle.js --live",
+    "build": "export NODE_ENV=production && browserify src/index.js > bundle.js"
   },
   "browserify": {
     "transform": [
@@ -33,6 +34,7 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
     "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
     "budo": "^7.0.2",
     "eslint": "^1.10.3",
     "glslify": "^4.0.0"
