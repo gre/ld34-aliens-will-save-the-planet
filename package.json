@@ -1,0 +1,40 @@
+{
+  "name": "ld34-aliens-will-save-the-planet",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "budo src/index.js:bundle.js --live"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015",
+            "stage-0"
+          ]
+        }
+      ],
+      "glslify"
+    ]
+  },
+  "dependencies": {
+    "gl-fbo": "^2.0.5",
+    "gl-shader": "^4.1.0",
+    "gl-texture2d": "^2.0.10",
+    "glsl-pi": "^1.0.0",
+    "glsl-random": "0.0.5",
+    "numeral": "^1.5.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^4.1.6",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "babelify": "^7.2.0",
+    "budo": "^7.0.2",
+    "eslint": "^1.10.3",
+    "glslify": "^4.0.0"
+  }
+}

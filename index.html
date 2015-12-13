@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aliens will save the planet</title>
+  <style>
+body {
+  color: #fff;
+  background: #000;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-family: monospace;
+  font-weight: lighter;
+  font-size: 12px;
+}
+#wrapper {
+  margin: 20px auto;
+  width: 400px;
+  position: relative;
+}
+#game {
+  cursor: crosshair;
+}
+#gamestart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  pointer-events: none;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 10px;
+  color: #fff;
+  background: #000;
+}
+.start #gamestart {
+  opacity: 0;
+  transition: opacity 3s;
+}
+.descr {
+  font-style: italic;
+  opacity: 0.5;
+  padding: 20px 0;
+  font-size: 10px;
+}
+#gameui {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  pointer-events: none;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 10px;
+  color: #000;
+  opacity: 0;
+}
+#help {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  color: #fff;
+  opacity: 0.6;
+}
+.start #gameui {
+  opacity: 1;
+  transition: opacity 1s 4s;
+}
+#gameui span {
+  font-weight: bold;
+  color: #fff;
+}
+footer {
+}
+footer span {
+  padding: 2px 10px;
+}
+strong {
+  font-weight: bold;
+}
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <canvas id="game" width="400" height="400"></canvas>
+    <div id="gameui">
+      <div class="year">year <span id="year"></span></div>
+      <div class="factories">polluting factories <span id="factories"></span></div>
+      <div class="humans">humans <span id="humans"></span></div>
+      <div class="co2">CO<small>2</small> <span id="co2"></span></div>
+      <div class="o2">O<small>2</small> <span id="o2"></span></div>
+      <div class="n2">N<small>2</small> <span id="n2"></span></div>
+      <div id="help"></div>
+    </div>
+    <div id="gamestart">
+      <h1>ALIENS WILL SAVE THE PLANET</h1>
+      <div class="descr">
+<p>Year 2100, humans have pretty much fucked up the planet.</p>
+<p>You are an alien and your goal is to save it.</p>
+
+<br/>
+<br/>
+<br/>
+
+Use the air vacuum cleaner, to clear the air.
+Plant trees, to restore O2.
+Destroy human polluting facilities, but avoid human casualties.
+      </div>
+    </div>
+    <footer>
+      <span><strong>C</strong>: plant trees</span>
+      <span><strong>V</strong>: vacuum air</span>
+      <span><strong>B</strong>: send bomb</span>
+    </footer>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+</html>
